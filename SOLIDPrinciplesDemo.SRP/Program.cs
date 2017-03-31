@@ -1,5 +1,6 @@
 ﻿using SOLIDPrinciplesDemo.SRP.Features.CarDetailsPrompt;
 using SOLIDPrinciplesDemo.SRP.Features.ConvertCarYearToNumber;
+using SOLIDPrinciplesDemo.SRP.Services.CarPromptService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,10 @@ namespace SOLIDPrinciplesDemo.SRP
             bool exitApp = false;
             while (!exitApp)
             {
-                
 
+                var service = new CarPromptService();
+                service.PromptForCarDetails();
+                service
 
                 if (!int.TryParse(carYear, out numericCarYear))
                 {
