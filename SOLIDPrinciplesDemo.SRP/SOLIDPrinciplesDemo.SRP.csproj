@@ -42,22 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\CarYearLengthValidation\CarYearLengthValidation.cs" />
-    <Compile Include="Services\CarPromptService\CarPromptService.cs" />
-    <Compile Include="Features\CarDetailsPrompt\CarDetailsPrompt.cs" />
-    <Compile Include="Features\CarDetailsPrompt\CarMakeRequest.cs" />
-    <Compile Include="Features\CarDetailsPrompt\CarYearRequest.cs" />
-    <Compile Include="Features\ConvertCarYearToNumber\CarYearConverter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CarPromptService\CarYearValidationResult.cs" />
-    <Compile Include="Services\CarPromptService\PromptForCarDetailsResult.cs" />
+    <Compile Include="Services\CarAcceptanceService\CarAcceptanceService.cs" />
+    <Compile Include="Services\CarAcceptanceService\CarDetails.cs" />
+    <Compile Include="Services\CarValidationService\CarValidationRule.cs" />
+    <Compile Include="Services\CarAcceptanceService\ConsolePrompts\PromptForResponse.cs" />
+    <Compile Include="Services\CarAcceptanceService\SOLIDCarAcceptanceService.cs" />
+    <Compile Include="Services\Shared\ValidationRule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\CarYearEnteredValidation\" />
+    <Folder Include="Services\CarAcceptanceService\CarValidationRules\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
