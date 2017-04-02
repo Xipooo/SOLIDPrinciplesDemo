@@ -18,8 +18,8 @@ namespace SOLIDPrinciplesDemo.SRP
             {
 
                 var service = new CarPromptService();
-                service.PromptForCarDetails();
-                service
+                var carEntered = service.PromptForCarDetails();
+                var carYearValidationResult = service.CarYearValidation(carEntered.CarYear);
 
                 if (!int.TryParse(carYear, out numericCarYear))
                 {

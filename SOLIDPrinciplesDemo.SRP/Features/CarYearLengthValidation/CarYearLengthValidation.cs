@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SOLIDPrinciplesDemo.SRP.Features.CarYearLengthValidation
+﻿namespace SOLIDPrinciplesDemo.SRP.Features.CarYearLengthValidation
 {
     public class CarYearLengthValidation
     {
-        public CarYearLengthValidation()
-        {
+        public bool Successful { get; }
+        public string FailureReason { get; }
 
+        public CarYearLengthValidation(string CarYear)
+        {
+            Successful = (CarYear.Length == 2 || CarYear.Length == 4);
+            FailureReason = (Successful ? null : "Year entered is not 2 or 4 digits.");
         }
     }
 }

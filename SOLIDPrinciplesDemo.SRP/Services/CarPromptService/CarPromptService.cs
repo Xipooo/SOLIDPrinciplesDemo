@@ -1,6 +1,6 @@
 ﻿using SOLIDPrinciplesDemo.SRP.Features.CarDetailsPrompt;
+using SOLIDPrinciplesDemo.SRP.Features.CarYearLengthValidation;
 using SOLIDPrinciplesDemo.SRP.Features.ConvertCarYearToNumber;
-using System;
 
 namespace SOLIDPrinciplesDemo.SRP.Services.CarPromptService
 {
@@ -19,10 +19,8 @@ namespace SOLIDPrinciplesDemo.SRP.Services.CarPromptService
             CarYearConverter carYearConverter = new CarYearConverter(carYear);
             if (!carYearConverter.Successful) return CarValidationFailedResultFailed(carYearConverter);
 
-            if (carYear.Length != 2 && carYear.Length != 4)
-            {
-
-            }
+            CarYearLengthValidation carYearLengthValidation = new CarYearLengthValidation(carYear);
+            if (!carYearLengthValidation.Successful) return CarValidationFailedResultFailed(carYearLengthValidation);
         }
 
         private CarYearValidationResult CarValidationFailedResultFailed(CarYearConverter carYearConverter) =>
@@ -32,5 +30,11 @@ namespace SOLIDPrinciplesDemo.SRP.Services.CarPromptService
                 FailureReason = carYearConverter.FailureReason
             };
 
+        private CarYearValidationResult CarValidationFailedResultFailed(CarYearLengthValidation carYearLengthValidation) =>
+            new CarYearValidationResult
+            {
+                Successful = carYearLengthValidation.Successful,
+                FailureReason = carYearLengthValidation.FailureReason
+            };
     }
 }
