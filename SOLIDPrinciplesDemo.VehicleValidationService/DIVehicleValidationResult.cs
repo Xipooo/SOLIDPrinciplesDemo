@@ -1,6 +1,6 @@
-﻿using SOLIDPrinciplesDemo.Refactored.Services.Shared;
+﻿using SOLIDPrinciplesDemo.Common;
 
-namespace SOLIDPrinciplesDemo.Refactored.Services.VehicleValidationService
+namespace SOLIDPrinciplesDemo.VehicleValidationService
 {
     class DIVehicleValidationResult : ValidationResult
     {

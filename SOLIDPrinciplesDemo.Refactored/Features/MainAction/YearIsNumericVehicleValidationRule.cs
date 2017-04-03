@@ -1,7 +1,8 @@
-﻿using SOLIDPrinciplesDemo.Refactored.Services.Shared;
-using SOLIDPrinciplesDemo.Refactored.Services.VehicleValidationService;
+﻿using System;
+using SOLIDPrinciplesDemo.Common;
+using SOLIDPrinciplesDemo.VehicleValidationService;
 
-namespace SOLIDPrinciplesDemo.Refactored.Features.MainAPI
+namespace SOLIDPrinciplesDemo.Refactored.Features.MainAction
 {
     class YearIsNumericVehicleValidationRule : VehicleValidationRule
     {
@@ -13,9 +14,13 @@ namespace SOLIDPrinciplesDemo.Refactored.Features.MainAPI
 
         public YearIsNumericVehicleValidationRule(string VehicleYear)
         {
-            int newYear;
-            Successful = int.TryParse(VehicleYear, out newYear);
+            Successful = int.TryParse(VehicleYear, out int newYear);
             if (!Successful) FailureReason = "The year is not numeric.";
+        }
+
+        public ValidationResult ValidateVehicleRule(Vehicle Vehicle)
+        {
+            throw new NotImplementedException();
         }
     }
 }

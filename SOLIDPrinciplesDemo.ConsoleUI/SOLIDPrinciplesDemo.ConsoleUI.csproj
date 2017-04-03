@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CC6739A-4819-4471-AA62-05014BB40F93}</ProjectGuid>
+    <ProjectGuid>{6EEEA598-88F2-4542-A0F1-8B060C17A53C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SOLIDPrinciplesDemo.Refactored</RootNamespace>
-    <AssemblyName>SOLIDPrinciplesDemo.Refactored</AssemblyName>
+    <RootNamespace>SOLIDPrinciplesDemo.ConsoleUI</RootNamespace>
+    <AssemblyName>SOLIDPrinciplesDemo.ConsoleUI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,35 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\MainAction\GetVehicleDetailsResult.cs" />
-    <Compile Include="Features\MainAction\MainOrchestrator.cs" />
-    <Compile Include="Features\MainAction\SOLIDMainOrchestrator.cs" />
-    <Compile Include="Features\MainAction\VehicleDetails.cs" />
-    <Compile Include="Features\MainAction\YearIsNumericVehicleValidationRule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\UserPrompt\ConsolePromptServiceProxy.cs" />
-    <Compile Include="Services\UserPrompt\SOLIDConsolePromptServiceProxy.cs" />
-    <Compile Include="Services\VehicleValidation\SOLIDVehicleValidationServiceProxy.cs" />
-    <Compile Include="Services\VehicleValidation\VehicleValidationServiceProxy.cs" />
+    <Compile Include="UserPrompt\ConsolePromptService.cs" />
+    <Compile Include="UserPrompt\ReadKeyPromptService.cs" />
+    <Compile Include="UserPrompt\ReadLinePromptService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SOLIDPrinciplesDemo.Common\SOLIDPrinciplesDemo.Common.csproj">
-      <Project>{fa29c212-a257-49b3-83bc-8c3dfd0011b9}</Project>
-      <Name>SOLIDPrinciplesDemo.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SOLIDPrinciplesDemo.UserPromptService\SOLIDPrinciplesDemo.UserPromptService.csproj">
-      <Project>{c376b17f-acb2-4e5d-a2f4-94348b24e619}</Project>
-      <Name>SOLIDPrinciplesDemo.UserPromptService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SOLIDPrinciplesDemo.VehicleValidationService\SOLIDPrinciplesDemo.VehicleValidationService.csproj">
-      <Project>{92b3a11b-d0bb-4b00-9664-4129a808c1fa}</Project>
-      <Name>SOLIDPrinciplesDemo.VehicleValidationService</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

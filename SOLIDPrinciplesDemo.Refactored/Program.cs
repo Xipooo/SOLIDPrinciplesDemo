@@ -10,7 +10,7 @@ namespace SOLIDPrinciplesDemo.Refactored
             bool exitApp = false;
             while (!exitApp)
             {
-                new MainInterface().WriteResult(new MainInterface().ValidateVehicle(new MainInterface().GetVehicleDetails()));
+                new SOLIDMainOrchestrator().WriteResult(new SOLIDMainOrchestrator().ValidateVehicle(new SOLIDMainOrchestrator().GetVehicleDetails()));
 
                 
 

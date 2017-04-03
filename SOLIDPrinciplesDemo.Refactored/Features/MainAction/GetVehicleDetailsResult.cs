@@ -1,4 +1,4 @@
-﻿namespace SOLIDPrinciplesDemo.Refactored.Features.MainAPI
+﻿namespace SOLIDPrinciplesDemo.Refactored.Features.MainAction
 {
     interface GetVehicleDetailsResult
     {

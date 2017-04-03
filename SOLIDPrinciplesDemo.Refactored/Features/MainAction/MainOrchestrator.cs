@@ -1,8 +1,8 @@
-﻿using SOLIDPrinciplesDemo.Refactored.Services.Shared;
+﻿using SOLIDPrinciplesDemo.Common;
 
-namespace SOLIDPrinciplesDemo.Refactored.Features.MainAPI
+namespace SOLIDPrinciplesDemo.Refactored.Features.MainAction
 {
-    interface MainAPI
+    interface MainOrchestrator
     {
         GetVehicleDetailsResult GetVehicleDetails();
         ValidationResult ValidateVehicle(GetVehicleDetailsResult Vehicle);
