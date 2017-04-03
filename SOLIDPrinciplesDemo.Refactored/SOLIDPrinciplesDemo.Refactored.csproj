@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CC6739A-4819-4471-AA62-05014BB40F93}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SOLIDPrinciplesDemo.Refactored</RootNamespace>
+    <AssemblyName>SOLIDPrinciplesDemo.Refactored</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\MainAPI\GetVehicleDetailsResult.cs" />
+    <Compile Include="Features\MainAPI\MainAPI.cs" />
+    <Compile Include="Features\MainAPI\MainInterface.cs" />
+    <Compile Include="Features\MainAPI\YearIsNumericVehicleValidationRule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Shared\Vehicle.cs" />
+    <Compile Include="Services\VehicleValidationService\DIVehicleValidationResult.cs" />
+    <Compile Include="Services\VehicleValidationService\DTOVehicleValidationResult.cs" />
+    <Compile Include="Services\VehicleValidationService\SOLIDVehicleValidationService.cs" />
+    <Compile Include="Services\VehicleValidationService\VehicleValidationRule.cs" />
+    <Compile Include="Services\VehicleValidationService\VehicleValidationService.cs" />
+    <Compile Include="Services\Shared\ValidationResult.cs" />
+    <Compile Include="Services\UserPrompt\ReadKeyPromptService.cs" />
+    <Compile Include="Services\UserPrompt\ReadLinePromptService.cs" />
+    <Compile Include="Services\UserPrompt\ConsolePromptService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
