@@ -15,26 +15,28 @@ namespace SOLIDPrinciplesDemo.Refactored.Features.MainAction
             _consolePromptService = ConsolePromptServiceProxy;
             _vehicleValidationService = VehicleValidationServiceProxy;
         }
-        public GetVehicleDetailsResult GetVehicleDetails()
+
+        private GetVehicleDetailsResult GetVehicleDetails()
         {
             return new VehicleDetails(
                 _consolePromptService.GetStringFromUser("Please enter the make of the car:"),
                 _consolePromptService.GetStringFromUser("Please enter the year of the car:"));
         }
 
-        public ValidationResult ValidateVehicle(GetVehicleDetailsResult Vehicle)
+        private ValidationResult ValidateVehicle(GetVehicleDetailsResult Vehicle)
         {
-            _vehicleValidationService.ValidateVehicleThreadSafe(
-                new List<VehicleValidationService.VehicleValidationRule>
-                {
+            return _vehicleValidationService.ValidateVehicleThreadSafe(
+                 new List<VehicleValidationService.VehicleValidationRule>
+                 {
                     new YearIsNumericVehicleValidationRule(Vehicle.CarYear),
-
-                });
+                 });
         }
 
-        public void WriteResult(ValidationResult ValidationResult)
+        private 
+
+        public void RunVehicleValidation()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

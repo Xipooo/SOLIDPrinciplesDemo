@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace SOLIDPrinciplesDemo.VehicleValidationService
 {
-    public abstract class VehicleValidationService
+    public interface VehicleValidationService
     {
-        public ValidationResult Result { get; }
-        public VehicleValidationService(List<VehicleValidationRule> VehicleValidationRules) { }
+        ValidationResult ValidateRules(List<VehicleValidationRule> VehicleValidationRules);
     }
 }

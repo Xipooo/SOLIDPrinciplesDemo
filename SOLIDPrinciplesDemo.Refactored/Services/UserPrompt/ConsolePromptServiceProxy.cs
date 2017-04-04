@@ -6,5 +6,6 @@ namespace SOLIDPrinciplesDemo.Refactored.Services.UserPrompt
     {
         ConsoleKey GetKeyFromUser(string PromptText);
         string GetStringFromUser(string PromptText);
+        void PostMessageToUser(string MessageText);
     }
 }

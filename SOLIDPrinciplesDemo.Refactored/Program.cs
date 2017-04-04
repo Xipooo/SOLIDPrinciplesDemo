@@ -7,17 +7,19 @@ namespace SOLIDPrinciplesDemo.Refactored
 {
     class Program
     {
-        internal ConsolePromptServiceProxy ConsolePromptService => new SOLIDConsolePromptServiceProxy();
-        internal VehicleValidationServiceProxy VehicleValidationService => new SOLIDVehicleValidationServiceProxy();
+        //internal ConsolePromptServiceProxy ConsolePromptService => new SOLIDConsolePromptServiceProxy();
+        //internal VehicleValidationServiceProxy VehicleValidationService => new SOLIDVehicleValidationServiceProxy();
+
+        static internal MainOrchestrator Orchestrator = new SOLIDMainOrchestrator(new SOLIDConsolePromptServiceProxy(), new SOLIDVehicleValidationServiceProxy());
 
         static void Main(string[] args)
         {
             bool exitApp = false;
             while (!exitApp)
             {
-                
+                Orchestrator.GetVehicleDetails();
 
-                orchestrator.WriteResult(orchestrator.ValidateVehicle(orchestrator.GetVehicleDetails()));
+                Orchestrator.WriteResult(orchestrator.ValidateVehicle(orchestrator.GetVehicleDetails()));
 
 
                 int numericCarYear;

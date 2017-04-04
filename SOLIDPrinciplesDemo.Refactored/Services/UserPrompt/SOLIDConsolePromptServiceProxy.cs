@@ -7,5 +7,7 @@ namespace SOLIDPrinciplesDemo.Refactored.Services.UserPrompt
     {
         public ConsoleKey GetKeyFromUser(string PromptText) => new ReadKeyPromptService().GetAnswer(PromptText);
         public string GetStringFromUser(string PromptText) => new ReadLinePromptService().GetAnswer(PromptText);
+
+        public void PostMessageToUser(string MessageText) => new WriteLinePromptService().PostMessage(MessageText);
     }
 }
