@@ -1,18 +1,23 @@
-﻿using SOLIDPrinciplesDemo.Refactored.Features.MainAPI;
+﻿using SOLIDPrinciplesDemo.Refactored.Features.MainAction;
+using SOLIDPrinciplesDemo.Refactored.Services.UserPrompt;
+using SOLIDPrinciplesDemo.Refactored.Services.VehicleValidation;
 using System;
 
 namespace SOLIDPrinciplesDemo.Refactored
 {
     class Program
     {
+        internal ConsolePromptServiceProxy ConsolePromptService => new SOLIDConsolePromptServiceProxy();
+        internal VehicleValidationServiceProxy VehicleValidationService => new SOLIDVehicleValidationServiceProxy();
+
         static void Main(string[] args)
         {
             bool exitApp = false;
             while (!exitApp)
             {
-                new SOLIDMainOrchestrator().WriteResult(new SOLIDMainOrchestrator().ValidateVehicle(new SOLIDMainOrchestrator().GetVehicleDetails()));
-
                 
+
+                orchestrator.WriteResult(orchestrator.ValidateVehicle(orchestrator.GetVehicleDetails()));
 
 
                 int numericCarYear;

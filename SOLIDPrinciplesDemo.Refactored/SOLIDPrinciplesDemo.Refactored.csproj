@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Features\MainAction\GetVehicleDetailsResult.cs" />
     <Compile Include="Features\MainAction\MainOrchestrator.cs" />
+    <Compile Include="Features\MainAction\ProgramExtensions.cs" />
     <Compile Include="Features\MainAction\SOLIDMainOrchestrator.cs" />
     <Compile Include="Features\MainAction\VehicleDetails.cs" />
     <Compile Include="Features\MainAction\YearIsNumericVehicleValidationRule.cs" />
