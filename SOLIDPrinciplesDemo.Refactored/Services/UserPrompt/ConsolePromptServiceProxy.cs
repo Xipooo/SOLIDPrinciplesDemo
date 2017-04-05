@@ -2,7 +2,7 @@
 
 namespace SOLIDPrinciplesDemo.Refactored.Services.UserPrompt
 {
-    interface ConsolePromptServiceProxy
+    public interface ConsolePromptServiceProxy
     {
         ConsoleKey GetKeyFromUser(string PromptText);
         string GetStringFromUser(string PromptText);

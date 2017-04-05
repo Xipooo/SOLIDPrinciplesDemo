@@ -9,5 +9,6 @@ namespace SOLIDPrinciplesDemo.UserPromptService
             Console.WriteLine(Question);
             return Console.ReadKey().Key;
         }
+
     }
 }

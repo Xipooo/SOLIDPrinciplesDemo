@@ -2,9 +2,8 @@
 
 namespace SOLIDPrinciplesDemo.VehicleValidationService
 {
-    public abstract class VehicleValidationRule
+    public interface VehicleValidationRule
     {
-        public ValidationResult Result { get; }
-        public VehicleValidationRule(Vehicle Vehicle) { }
+        ValidationResult Result { get; }
     }
 }

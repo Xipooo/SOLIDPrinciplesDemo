@@ -1,6 +1,6 @@
 ﻿namespace SOLIDPrinciplesDemo.Refactored.Features.MainAction
 {
-    interface MainOrchestrator
+    public interface MainOrchestrator
     {
         void RunVehicleValidation();
     }

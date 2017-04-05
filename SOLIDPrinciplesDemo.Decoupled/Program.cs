@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SOLIDPrinciplesDemo.SRP
+namespace SOLIDPrinciplesDemo.Decoupled
 {
     class Program
     {
@@ -14,7 +18,6 @@ namespace SOLIDPrinciplesDemo.SRP
 
                 Console.WriteLine("Please enter the year of the car:");
                 string carYear = Console.ReadLine();
-
 
                 int numericCarYear;
 

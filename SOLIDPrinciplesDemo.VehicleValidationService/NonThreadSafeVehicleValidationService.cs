@@ -6,11 +6,12 @@ namespace SOLIDPrinciplesDemo.VehicleValidationService
 {
     public class NonThreadSafeVehicleValidationService : VehicleValidationService
     {
-        public ValidationResult ValidateVehicle(List<VehicleValidationRule> VehicleValidationRules)
+        public ValidationResult ValidateRules(List<VehicleValidationRule> VehicleValidationRules)
         {
-            return new DTOVehicleValidationResult {
-                Successful = VehicleValidationRules.All(r => r.Successful),
-                FailureReason = VehicleValidationRules.FirstOrDefault(r => !r.Successful)?.FailureReason
+            return new DTOVehicleValidationResult
+            {
+                Successful = VehicleValidationRules.All(r => r.Result.Successful),
+                FailureReason = VehicleValidationRules.FirstOrDefault(r => !r.Result.Successful)?.Result?.FailureReason
             };
         }
     }

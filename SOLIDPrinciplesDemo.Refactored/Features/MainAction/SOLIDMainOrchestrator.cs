@@ -1,8 +1,7 @@
-﻿using System;
-using SOLIDPrinciplesDemo.Common;
+﻿using SOLIDPrinciplesDemo.Common;
 using SOLIDPrinciplesDemo.Refactored.Services.UserPrompt;
 using SOLIDPrinciplesDemo.Refactored.Services.VehicleValidation;
-using System.Collections.Generic;
+using System;
 
 namespace SOLIDPrinciplesDemo.Refactored.Features.MainAction
 {
@@ -16,27 +15,23 @@ namespace SOLIDPrinciplesDemo.Refactored.Features.MainAction
             _vehicleValidationService = VehicleValidationServiceProxy;
         }
 
-        private GetVehicleDetailsResult GetVehicleDetails()
-        {
-            return new VehicleDetails(
+        private GetVehicleDetailsResult GetVehicleDetails() =>
+            new VehicleDetails(
                 _consolePromptService.GetStringFromUser("Please enter the make of the car:"),
                 _consolePromptService.GetStringFromUser("Please enter the year of the car:"));
-        }
 
-        private ValidationResult ValidateVehicle(GetVehicleDetailsResult Vehicle)
-        {
-            return _vehicleValidationService.ValidateVehicleThreadSafe(
-                 new List<VehicleValidationService.VehicleValidationRule>
-                 {
-                    new YearIsNumericVehicleValidationRule(Vehicle.CarYear),
-                 });
-        }
+        private ValidationResult ValidateVehicle(GetVehicleDetailsResult VehicleDetails) =>
+            _vehicleValidationService.ValidateVehicle(new ValidationRulesContainer().VehicleValidationRules(VehicleDetails));
 
-        private 
+        private void DisplayValidationResult(ValidationResult ValidationResult) =>
+            _consolePromptService.PostMessageToUser((ValidationResult.Successful ? "" : ValidationResult.FailureReason));
 
         public void RunVehicleValidation()
         {
-            
+            do
+            {
+                DisplayValidationResult(ValidateVehicle(GetVehicleDetails()));
+            } while (_consolePromptService.GetKeyFromUser(@"Would you like to try another car? (Y/N)") == ConsoleKey.Y);
         }
     }
 }

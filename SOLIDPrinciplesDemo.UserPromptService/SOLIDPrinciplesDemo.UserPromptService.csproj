@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SOLIDPrinciplesDemo.UserPromptService</RootNamespace>
     <AssemblyName>SOLIDPrinciplesDemo.UserPromptService</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,10 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsolePostService.cs" />
     <Compile Include="ConsolePromptService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadKeyPromptService.cs" />
     <Compile Include="ReadLinePromptService.cs" />
+    <Compile Include="WriteLinePromptService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SOLIDPrinciplesDemo.Common\SOLIDPrinciplesDemo.Common.csproj">
+      <Project>{35be0282-cf88-4ed6-be94-ee5aaafd3007}</Project>
+      <Name>SOLIDPrinciplesDemo.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

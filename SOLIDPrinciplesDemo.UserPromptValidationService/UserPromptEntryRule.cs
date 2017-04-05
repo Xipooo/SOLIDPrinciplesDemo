@@ -2,10 +2,8 @@
 
 namespace SOLIDPrinciplesDemo.UserPromptValidationService
 {
-    public abstract class UserPromptEntryRule
+    public interface UserPromptEntryRule
     {
-        public ValidationResult Result { get; }
-
-        public UserPromptEntryRule(string UserEntry) { }
+        ValidationResult Result { get; }
     }
 }

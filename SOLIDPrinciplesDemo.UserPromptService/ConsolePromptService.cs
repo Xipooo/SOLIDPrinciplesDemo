@@ -1,6 +1,6 @@
 ﻿namespace SOLIDPrinciplesDemo.UserPromptService
 {
-    interface ConsolePromptService<T>
+    public interface ConsolePromptService<T>
     {
         T GetAnswer(string Question);
     }

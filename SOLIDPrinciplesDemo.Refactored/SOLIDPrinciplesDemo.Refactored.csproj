@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>SOLIDPrinciplesDemo.Refactored</RootNamespace>
     <AssemblyName>SOLIDPrinciplesDemo.Refactored</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,12 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyResolver.cs" />
     <Compile Include="Features\MainAction\GetVehicleDetailsResult.cs" />
     <Compile Include="Features\MainAction\MainOrchestrator.cs" />
-    <Compile Include="Features\MainAction\ProgramExtensions.cs" />
     <Compile Include="Features\MainAction\SOLIDMainOrchestrator.cs" />
+    <Compile Include="Features\MainAction\ValidationRulesContainer.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\AcceptedMakeValidationResult.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\AcceptedMakeValidationRule.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\AcceptedYearLengthVehicleValidationRule.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\AcceptedYearLengthVehicleValidationResult.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\VehicleValidationAllRulesGroup.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\VehicleValidationAllRulesGroupResult.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\VehicleValidationAnyRulesGroup.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\VehicleValidationAnyRulesGroupResult.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\YearGreaterThanValidationResult.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\YearGreaterThanValidationRule.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\YearLessThanValidationResult.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\YearLessThanValidationRule.cs" />
     <Compile Include="Features\MainAction\VehicleDetails.cs" />
-    <Compile Include="Features\MainAction\YearIsNumericVehicleValidationRule.cs" />
+    <Compile Include="Features\MainAction\ValidationRules\YearIsNumericVehicleValidationRule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\UserPrompt\ConsolePromptServiceProxy.cs" />
@@ -60,7 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SOLIDPrinciplesDemo.Common\SOLIDPrinciplesDemo.Common.csproj">
-      <Project>{fa29c212-a257-49b3-83bc-8c3dfd0011b9}</Project>
+      <Project>{35be0282-cf88-4ed6-be94-ee5aaafd3007}</Project>
       <Name>SOLIDPrinciplesDemo.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\SOLIDPrinciplesDemo.UserPromptService\SOLIDPrinciplesDemo.UserPromptService.csproj">

@@ -5,9 +5,21 @@ namespace SOLIDPrinciplesDemo.Refactored.Services.UserPrompt
 {
     class SOLIDConsolePromptServiceProxy : ConsolePromptServiceProxy
     {
-        public ConsoleKey GetKeyFromUser(string PromptText) => new ReadKeyPromptService().GetAnswer(PromptText);
-        public string GetStringFromUser(string PromptText) => new ReadLinePromptService().GetAnswer(PromptText);
+        private ConsolePostService _writeLinePromptService { get; }
+        private ConsolePromptService<ConsoleKey> _readKeyPromptService { get; }
+        private ConsolePromptService<string> _readLinePromptService { get; }
 
-        public void PostMessageToUser(string MessageText) => new WriteLinePromptService().PostMessage(MessageText);
+        public SOLIDConsolePromptServiceProxy(
+            ConsolePromptService<ConsoleKey> ReadKeyPromptService,
+            ConsolePromptService<string> ReadLinePromptService,
+            ConsolePostService WriteLinePromptService)
+        {
+            _readKeyPromptService = ReadKeyPromptService;
+            _readLinePromptService = ReadLinePromptService;
+            _writeLinePromptService = WriteLinePromptService;
+        }
+        public ConsoleKey GetKeyFromUser(string PromptText) => _readKeyPromptService.GetAnswer(PromptText);
+        public string GetStringFromUser(string PromptText) => _readLinePromptService.GetAnswer(PromptText);
+        public void PostMessageToUser(string MessageText) => _writeLinePromptService.PostMessage(MessageText);
     }
 }

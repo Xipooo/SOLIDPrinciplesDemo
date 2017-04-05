@@ -2,7 +2,7 @@
 
 namespace SOLIDPrinciplesDemo.VehicleValidationService
 {
-    class DIVehicleValidationResult : ValidationResult
+    public class DIVehicleValidationResult : ValidationResult
     {
         public string FailureReason { get; }
         public bool Successful { get; }

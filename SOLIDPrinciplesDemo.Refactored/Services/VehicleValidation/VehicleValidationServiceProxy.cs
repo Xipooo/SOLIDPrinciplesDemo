@@ -4,10 +4,8 @@ using SOLIDPrinciplesDemo.VehicleValidationService;
 
 namespace SOLIDPrinciplesDemo.Refactored.Services.VehicleValidation
 {
-    interface VehicleValidationServiceProxy
+    public interface VehicleValidationServiceProxy
     {
-        ValidationResult ValidateVehicle(VehicleValidationService.VehicleValidationService VehicleValidationService, List<VehicleValidationRule> ValidationRules);
-        ValidationResult ValidateVehicleThreadSafe(List<VehicleValidationRule> ValidationRules);
-        ValidationResult ValidatieVehicleNonThreadSafe(List<VehicleValidationRule> ValidationRules);
+        ValidationResult ValidateVehicle(List<VehicleValidationRule> ValidationRules);
     }
 }

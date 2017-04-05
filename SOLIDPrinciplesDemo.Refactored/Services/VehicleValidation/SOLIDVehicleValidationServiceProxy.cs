@@ -6,15 +6,14 @@ namespace SOLIDPrinciplesDemo.Refactored.Services.VehicleValidation
 {
     class SOLIDVehicleValidationServiceProxy : VehicleValidationServiceProxy
     {
-        public ValidationResult ValidateVehicleThreadSafe(List<VehicleValidationRule> ValidationRules) => 
-            new ThreadSafeVehicleValidationService().ValidateVehicle(ValidationRules);
+        private VehicleValidationService.VehicleValidationService _vehicleValidationService { get; }
 
-        public ValidationResult ValidatieVehicleNonThreadSafe(List<VehicleValidationRule> ValidationRules) =>
-            new NonThreadSafeVehicleValidationService().ValidateVehicle(ValidationRules);
+        public SOLIDVehicleValidationServiceProxy(VehicleValidationService.VehicleValidationService VehicleValidationService)
+        {
+            _vehicleValidationService = VehicleValidationService;
+        }
 
-        public ValidationResult ValidateVehicle(
-            VehicleValidationService.VehicleValidationService VehicleValidationService,
-            List<VehicleValidationRule> ValidationRules) =>
-            VehicleValidationService.ValidateVehicle(ValidationRules);
+        public ValidationResult ValidateVehicle(List<VehicleValidationRule> ValidationRules) =>
+            _vehicleValidationService.ValidateRules(ValidationRules);
     }
 }

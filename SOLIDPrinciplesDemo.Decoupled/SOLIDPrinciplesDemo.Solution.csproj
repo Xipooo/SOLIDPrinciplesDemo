@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{580FBDD8-32AD-4DF4-A733-C0702A02D36F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SOLIDPrinciplesDemo.UserPromptValidationService</RootNamespace>
-    <AssemblyName>SOLIDPrinciplesDemo.UserPromptValidationService</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <ProjectGuid>{A492FEA8-FAF3-41E0-9AA5-994A363B8057}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SOLIDPrinciplesDemo.Solution</RootNamespace>
+    <AssemblyName>SOLIDPrinciplesDemo.Solution</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,17 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SOLIDUserPromptValidationService.cs" />
-    <Compile Include="UserPromptEntryRule.cs" />
-    <Compile Include="UserPromptValidationResult.cs" />
-    <Compile Include="UserPromptValidationService.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SOLIDPrinciplesDemo.Common\SOLIDPrinciplesDemo.Common.csproj">
-      <Project>{35be0282-cf88-4ed6-be94-ee5aaafd3007}</Project>
-      <Name>SOLIDPrinciplesDemo.Common</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

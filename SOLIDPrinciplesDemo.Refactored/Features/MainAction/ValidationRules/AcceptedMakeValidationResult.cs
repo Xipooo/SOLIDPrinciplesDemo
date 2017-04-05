@@ -1,13 +1,13 @@
 ﻿using SOLIDPrinciplesDemo.Common;
 
-namespace SOLIDPrinciplesDemo.UserPromptValidationService
+namespace SOLIDPrinciplesDemo.Refactored.Features.MainAction.ValidationRules
 {
-    public class UserPromptValidationResult : ValidationResult
+    class AcceptedMakeValidationResult : ValidationResult
     {
         public string FailureReason { get; }
         public bool Successful { get; }
 
-        public UserPromptValidationResult(bool Successful, string FailureReason)
+        public AcceptedMakeValidationResult(bool Successful, string FailureReason)
         {
             this.Successful = Successful;
             this.FailureReason = FailureReason;
