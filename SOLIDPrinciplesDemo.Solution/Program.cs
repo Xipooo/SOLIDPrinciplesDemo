@@ -1,23 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SOLIDPrinciplesDemo.Decoupled
+namespace SOLIDPrinciplesDemo.Solution
 {
     class Program
     {
         static void Main(string[] args)
         {
+
+
             bool exitApp = false;
             while (!exitApp)
             {
-                Console.WriteLine(Environment.NewLine + "Please enter the make of the car:");
-                string carMake = Console.ReadLine();
+                //Console.WriteLine(Environment.NewLine + "Please enter the make of the car:");
+                //string carMake = Console.ReadLine();
 
-                Console.WriteLine("Please enter the year of the car:");
-                string carYear = Console.ReadLine();
+                //Console.WriteLine("Please enter the year of the car:");
+                //string carYear = Console.ReadLine();
 
                 int numericCarYear;
 

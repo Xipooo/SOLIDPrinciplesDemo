@@ -5,13 +5,7 @@ VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDPrinciplesDemo", "SOLIDPrinciplesDemo\SOLIDPrinciplesDemo.csproj", "{EAA1603F-20FA-4F2A-9C65-CC12955D040C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLIDPrinciplesDemo.Common", "SOLIDPrinciplesDemo.Common\SOLIDPrinciplesDemo.Common.csproj", "{35BE0282-CF88-4ED6-BE94-EE5AAAFD3007}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDPrinciplesDemo.UserPromptService", "SOLIDPrinciplesDemo.UserPromptService\SOLIDPrinciplesDemo.UserPromptService.csproj", "{C376B17F-ACB2-4E5D-A2F4-94348B24E619}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDPrinciplesDemo.Refactored", "SOLIDPrinciplesDemo.Refactored\SOLIDPrinciplesDemo.Refactored.csproj", "{3CC6739A-4819-4471-AA62-05014BB40F93}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SOLIDPrinciplesDemo.VehicleValidationService", "SOLIDPrinciplesDemo.VehicleValidationService\SOLIDPrinciplesDemo.VehicleValidationService.csproj", "{7A056F8B-5286-4DE6-B1EF-8DC04AE57B47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDPrinciplesDemo.Solution", "SOLIDPrinciplesDemo.Solution\SOLIDPrinciplesDemo.Solution.csproj", "{9D2893F1-3E3D-4DD6-BC48-749347B2971E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,22 +17,10 @@ Global
 		{EAA1603F-20FA-4F2A-9C65-CC12955D040C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAA1603F-20FA-4F2A-9C65-CC12955D040C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAA1603F-20FA-4F2A-9C65-CC12955D040C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35BE0282-CF88-4ED6-BE94-EE5AAAFD3007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35BE0282-CF88-4ED6-BE94-EE5AAAFD3007}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35BE0282-CF88-4ED6-BE94-EE5AAAFD3007}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35BE0282-CF88-4ED6-BE94-EE5AAAFD3007}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C376B17F-ACB2-4E5D-A2F4-94348B24E619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C376B17F-ACB2-4E5D-A2F4-94348B24E619}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C376B17F-ACB2-4E5D-A2F4-94348B24E619}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C376B17F-ACB2-4E5D-A2F4-94348B24E619}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3CC6739A-4819-4471-AA62-05014BB40F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CC6739A-4819-4471-AA62-05014BB40F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CC6739A-4819-4471-AA62-05014BB40F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CC6739A-4819-4471-AA62-05014BB40F93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A056F8B-5286-4DE6-B1EF-8DC04AE57B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A056F8B-5286-4DE6-B1EF-8DC04AE57B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A056F8B-5286-4DE6-B1EF-8DC04AE57B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A056F8B-5286-4DE6-B1EF-8DC04AE57B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2893F1-3E3D-4DD6-BC48-749347B2971E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2893F1-3E3D-4DD6-BC48-749347B2971E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2893F1-3E3D-4DD6-BC48-749347B2971E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2893F1-3E3D-4DD6-BC48-749347B2971E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
