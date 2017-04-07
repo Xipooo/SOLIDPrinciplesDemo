@@ -6,16 +6,14 @@ namespace SOLIDPrinciplesDemo.Solution
     {
         static void Main(string[] args)
         {
-
-
             bool exitApp = false;
             while (!exitApp)
             {
-                //Console.WriteLine(Environment.NewLine + "Please enter the make of the car:");
-                //string carMake = Console.ReadLine();
+                Console.WriteLine(Environment.NewLine + "Please enter the make of the car:");
+                string carMake = Console.ReadLine();
 
-                //Console.WriteLine("Please enter the year of the car:");
-                //string carYear = Console.ReadLine();
+                Console.WriteLine("Please enter the year of the car:");
+                string carYear = Console.ReadLine();
 
                 int numericCarYear;
 
