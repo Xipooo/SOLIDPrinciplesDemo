@@ -6,6 +6,6 @@ namespace SOLIDPrinciplesDemo.Solution.Features.Validation
 {
     interface IVehicleValidationRules
     {
-        List<Func<IValidationResult>> GetRuleList(IVehicle vehicle);
+        List<Func<IVehicle, IValidationResult>> GetRuleList();
     }
 }

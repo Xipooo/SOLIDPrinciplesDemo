@@ -32,7 +32,7 @@ namespace SOLIDPrinciplesDemo
                 {
                     if (carYear.Length == 2)
                     {
-                        if (numericCarYear < 99 && numericCarYear > 17)
+                        if (numericCarYear < 97 && numericCarYear > 17)
                         {
                             Console.WriteLine("Your car is too old!");
                         }
@@ -43,7 +43,7 @@ namespace SOLIDPrinciplesDemo
                     }
                     else if (carYear.Length == 4)
                     {
-                        if (numericCarYear < 1999)
+                        if (numericCarYear < 1997)
                         {
                             Console.WriteLine("Your car is too old!");
                         }
@@ -61,11 +61,11 @@ namespace SOLIDPrinciplesDemo
                 {
                     if (carYear.Length == 2)
                     {
-                        if (numericCarYear >= 15 && numericCarYear <= 18)
+                        if (numericCarYear >= 6 && numericCarYear <= 18)
                         {
                             Console.WriteLine("Your car is too new!");
                         }
-                        else if (numericCarYear <= 95)
+                        else if (numericCarYear <= 98)
                         {
                             Console.WriteLine("Your car is too old!");
                         }
@@ -76,11 +76,11 @@ namespace SOLIDPrinciplesDemo
                     }
                     else if (carYear.Length == 4)
                     {
-                        if (numericCarYear >= 2015)
+                        if (numericCarYear >= 2006)
                         {
                             Console.WriteLine("Your car is too new!");
                         }
-                        else if (numericCarYear <= 1995)
+                        else if (numericCarYear <= 1998)
                         {
                             Console.WriteLine("Your car is too old!");
                         }

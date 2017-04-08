@@ -1,8 +1,8 @@
-﻿using SOLIDPrinciplesDemo.Solution.Features.GetCarDetails;
+﻿using SOLIDPrinciplesDemo.Solution.Features.Common;
+using SOLIDPrinciplesDemo.Solution.Features.GetCarDetails;
 using SOLIDPrinciplesDemo.Solution.Features.UserPrompt;
 using SOLIDPrinciplesDemo.Solution.Features.Validation;
-using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace SOLIDPrinciplesDemo.Solution.Application
 {
@@ -28,11 +28,12 @@ namespace SOLIDPrinciplesDemo.Solution.Application
         }
 
         public string GetVehicleMake() => _carDetailsOrchestrator.GetVehicleMake();
-
         public string GetVehicleYear() => _carDetailsOrchestrator.GetVehicleYear();
-
         public void PostMessage(string MessageText) => _userPrompt.PostMessage(MessageText);
-
-        public IValidationResult ValidateVehicle => 
+        public IValidationResult ValidateVehicle(IVehicle vehicle) =>
+            _vehicleValidationRules.GetRuleList().Any(r => !r(vehicle).Successful) ?
+                 _vehicleValidationRules.GetRuleList().FirstOrDefault(r => !r(vehicle).Successful).Invoke(vehicle) :
+                CreateSuccessfulResult();
+        private IValidationResult CreateSuccessfulResult() { _validationResult.Successful = true; return _validationResult; }
     }
 }
